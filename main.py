@@ -3,11 +3,13 @@ def main():
     text = get_book_text(book_path)
     num_words = word_count(text)
     print(f"Found {num_words} total words")
+    num_letters = letter_count(text)
+    print(f"{num_letters}")
 
 def get_book_text(path):
     with open(path) as f:
         return f.read()
 
-from stats import word_count
+from stats import word_count, letter_count
 
 main()
